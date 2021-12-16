@@ -63,7 +63,6 @@
   bottom: 0;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  width: 50rem;
   min-width: 95%;
   z-index: 5;
   animation: showCart 500ms ease-in-out;
