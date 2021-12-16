@@ -1,2 +1,2 @@
 # React portfolio project – Fortnite-shop
-[Demo](https://github.com/Franel-create/fortnite-shop)
+[Demo](https://franel-create.github.io/fortnite-shop/)
