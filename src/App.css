@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+.nav-header {
+  padding: 0 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid-cards {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  cursor: pointer;
+  height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.description {
+  margin: 0 0 20px 0;
+}
+
+.price-block {
+  position: absolute !important;
+  bottom: 0;
+  padding: 0 0 20px 0;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0 0 0 50px;
 }
 
-@keyframes App-logo-spin {
+.cart {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 5;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 767px) {
+  .cart {
+    top: 70px;
+    bottom: unset;
+  }
+}
+
+.cart-list {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 50rem;
+  min-width: 95%;
+  z-index: 5;
+  animation: showCart 500ms ease-in-out;
+}
+
+.cart-close {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 25px;
+  transition: color 0.3s ease 0s;
+}
+
+.cart-close:hover {
+  color: rgb(153, 25, 185);
+}
+
+.item-close {
+  cursor: pointer;
+}
+
+@keyframes showCart {
   from {
-    transform: rotate(0deg);
+    bottom: 30%;
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    bottom: 0;
+    opacity: 1;
   }
 }
+
+.btn-amount {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.btn-buy {
+  margin: 10px;
+}
+
+#toast-container {
+  top: 50px !important;
+  animation: fade-in 250ms ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
