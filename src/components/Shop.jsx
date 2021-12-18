@@ -67,7 +67,7 @@ const Shop = () => {
             if (orderItem.mainId === mainId) {
                 return {
                     ...orderItem,
-                    quantity: newQuantity >= 0 ? newQuantity : 0
+                    quantity: newQuantity >= 1 ? newQuantity : 1
                 } 
             } else {
                 return orderItem;
